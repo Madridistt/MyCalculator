@@ -71,5 +71,18 @@
             android:layout_weight="1"
             android:textSize="8pt"
             android:text="/btnDiv" />
+
     </LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5pt"
+        android:layout_marginLeft="8pt"
+        android:layout_marginRight="8pt"
+        android:layout_weight="1"
+        android:textSize="12pt"
+        android:text="TextView"
+        android:gravity="center_vertical"
+        />
 </LinearLayout>
