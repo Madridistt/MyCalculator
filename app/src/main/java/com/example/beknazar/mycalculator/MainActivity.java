@@ -4,12 +4,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+  final int MENU_RESET_ID=1;
+  final int MENU_QUIT_ID=2;
   EditText etNum1;
   EditText etNum2;
 
@@ -28,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         etNum1=(EditText) findViewById(R.id.etNum1);
         etNum2=(EditText) findViewById(R.id.etNum2);
-
         btnAdd=(Button) findViewById(R.id.btnAdd);
         btnSub=(Button) findViewById(R.id.btnSub);
         btnMult=(Button) findViewById(R.id.btnMult);
@@ -74,6 +77,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                  break;
 
          }
+     tvResult.setText(num1 + " " + oper + " " + num2 + " " + result);
 
     }
-}
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu){
+        menu.add(0, MENU_RESET_ID, 0, "Reset");
+        menu.add(0, MENU_QUIT_ID, 0, "Quit");
+        return super.onCreateOptionsMenu(menu);
+    }
+    public boolean onOptionsItemSelected (MenuItem item) {
+        switch (item.getItemId()) {
+            case MENU_RESET_ID:
+                etNum1.setText("");
+            etNum2.setText("");
+            tvResult.setText("");
+            break;
+            case MENU_QUIT_ID;
+            finish();
+            break;
+        }
+        return super.onOptionsItemSelected(item);
+
+
+
+        }
+    }
+
+
