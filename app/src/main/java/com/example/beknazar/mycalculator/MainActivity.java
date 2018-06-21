@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             etNum2.setText("");
             tvResult.setText("");
             break;
-            case MENU_QUIT_ID;
+            case MENU_QUIT_ID:
             finish();
             break;
         }

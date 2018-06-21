@@ -82,7 +82,7 @@
         android:layout_marginRight="8pt"
         android:layout_weight="1"
         android:textSize="12pt"
-        android:text="TextView"
+        
         android:gravity="center_vertical"
         />
 </LinearLayout>
